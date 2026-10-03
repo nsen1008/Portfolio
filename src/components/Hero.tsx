@@ -186,12 +186,12 @@ export const Hero: React.FC = () => {
               onMouseEnter={() => setActiveTitle(t('Hello!'))}
               onMouseLeave={() => setActiveTitle(t(PORTFOLIO_INFO.nickname))}
               data-theme-original
-              className="rounded-[32px] md:rounded-[36px] overflow-hidden bg-white home-card-height relative group block cursor-pointer"
+              className="rounded-[20px] md:rounded-[22px] overflow-hidden bg-white home-card-height relative group block cursor-pointer"
             >
               <img
                 src={PORTFOLIO_INFO.avatar}
                 alt={t(PORTFOLIO_INFO.name)}
-                className="absolute left-[10%] top-[12%] block w-[78%] h-auto max-w-none transition-all duration-500 ease-out"
+                className="absolute left-[10%] top-[10%] block w-[76%] h-auto max-w-none transition-all duration-500 ease-out"
               />
             </div>
           </div>
@@ -203,7 +203,7 @@ export const Hero: React.FC = () => {
             <div
               onMouseEnter={() => setActiveTitle(t("Stack"))}
               onMouseLeave={() => setActiveTitle(t(PORTFOLIO_INFO.nickname))}
-              className="vexoo-hero-card p-3 sm:p-3.5 flex-1 flex items-center overflow-hidden relative rounded-[24px] sm:rounded-[28px] select-none cursor-pointer"
+              className="vexoo-hero-card p-3 sm:p-3.5 flex-1 flex items-center overflow-hidden relative rounded-[16px] sm:rounded-[18px] select-none cursor-pointer"
               title={t("Tech Stack")}
             >
               <motion.div
@@ -235,7 +235,7 @@ export const Hero: React.FC = () => {
               rel="noopener noreferrer"
               onMouseEnter={() => setActiveTitle(t("Resume"))}
               onMouseLeave={() => setActiveTitle(t(PORTFOLIO_INFO.nickname))}
-              className="vexoo-hero-card p-4 sm:p-5 flex-1 flex items-center justify-between group cursor-pointer block rounded-[24px] sm:rounded-[28px]"
+              className="vexoo-hero-card p-4 sm:p-5 flex-1 flex items-center justify-between group cursor-pointer block rounded-[16px] sm:rounded-[18px]"
             >
               <span className="text-base sm:text-lg font-medium font-display text-black">
                 <RollingText text={t("Resume")} />
