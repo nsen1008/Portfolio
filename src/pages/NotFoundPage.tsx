@@ -32,7 +32,7 @@ export const NotFoundPage: React.FC = () => {
   };
 
   useEffect(() => {
-    document.title = locale === 'en' ? '404 - Page Not Found' : '404 - Không tìm thấy trang';
+    document.title = '404 | Seneyu';
     window.scrollTo(0, 0);
   }, [locale]);
 

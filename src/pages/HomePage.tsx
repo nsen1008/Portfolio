@@ -6,7 +6,7 @@ import { Hero } from '../components/Hero';
 export const HomePage: React.FC = () => {
   const { t } = useLanguage();
   useEffect(() => {
-    document.title = `${t("Home")} — ${t("Nguyễn Thanh Sang")}`;
+    document.title = `${t("Home")} | Seneyu`;
     window.scrollTo(0, 0);
   }, [t]);
 

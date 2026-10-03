@@ -26,7 +26,7 @@ export const ProjectDetailPage: React.FC = () => {
 
   useEffect(() => {
     if (project) {
-      document.title = `${project.title.split('—')[0].trim()} — ${t("Nguyễn Thanh Sang")}`;
+      document.title = `${project.title.split('—')[0].trim()} | Seneyu`;
     }
     window.scrollTo(0, 0);
   }, [project, id, t]);

@@ -7,7 +7,7 @@ import { Footer } from '../components/Footer';
 export const PortfolioPage: React.FC = () => {
   const { t } = useLanguage();
   useEffect(() => {
-    document.title = `${t("Project")} — ${t("Nguyễn Thanh Sang")}`;
+    document.title = `${t("Project")} | Seneyu`;
     window.scrollTo(0, 0);
   }, [t]);
 

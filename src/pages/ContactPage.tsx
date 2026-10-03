@@ -7,7 +7,7 @@ import { Footer } from '../components/Footer';
 export const ContactPage: React.FC = () => {
   const { t } = useLanguage();
   useEffect(() => {
-    document.title = `${t("Contact")} — ${t("Nguyễn Thanh Sang")}`;
+    document.title = `${t("Contact")} | Seneyu`;
     window.scrollTo(0, 0);
   }, [t]);
 

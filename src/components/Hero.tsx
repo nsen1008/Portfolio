@@ -46,7 +46,7 @@ const TECH_LOGOS = [
     name: 'Tailwind CSS',
     icon: (
       <svg className="w-5 h-5 sm:w-6 sm:h-6 text-[#38BDF8]" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/>
+        <path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z" />
       </svg>
     ),
   },
@@ -54,11 +54,11 @@ const TECH_LOGOS = [
     name: 'Figma',
     icon: (
       <svg className="w-4 h-5 sm:w-5 sm:h-6" viewBox="0 0 38 57" fill="none">
-        <path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/>
-        <path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/>
-        <path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/>
-        <path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/>
-        <path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/>
+        <path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE" />
+        <path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83" />
+        <path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262" />
+        <path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E" />
+        <path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF" />
       </svg>
     ),
   },
@@ -101,7 +101,7 @@ export const Hero: React.FC = () => {
 
   return (
     <section className="home-hero">
-      
+
       <div className="home-title-stage">
         <AnimatePresence mode="wait">
           <motion.h1
@@ -119,7 +119,7 @@ export const Hero: React.FC = () => {
 
       <div className="home-grid-stage">
         <div className="home-grid">
-          
+
           {/* Card 1: About (Col 1 of 4) */}
           <div className="home-about md:col-span-1 h-full">
             <Link
@@ -191,14 +191,14 @@ export const Hero: React.FC = () => {
               <img
                 src={PORTFOLIO_INFO.avatar}
                 alt={t(PORTFOLIO_INFO.name)}
-                className="absolute left-[10%] top-[-3%] block w-[78%] h-auto max-w-none transition-all duration-500 ease-out"
+                className="absolute left-[10%] top-[12%] block w-[78%] h-auto max-w-none transition-all duration-500 ease-out"
               />
             </div>
           </div>
 
           {/* Card 5 & 6 Stack: Tools Marquee + Resume (Col 1 of 4) */}
           <div className="md:col-span-1 home-side-stack home-card-height">
-            
+
             {/* Subcard 5: Infinite Logo Marquee Slider */}
             <div
               onMouseEnter={() => setActiveTitle(t("Stack"))}
