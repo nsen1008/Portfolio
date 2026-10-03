@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tin nhắn mới từ Portfolio</title>
+</head>
+<body style="margin: 0; padding: 32px 16px; background-color: #f3f4f6; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #111827;">
+
+  <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; background-color: #ffffff; border-radius: 20px; overflow: hidden; box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06); border: 1px solid #e5e7eb;">
+    
+    <!-- Header -->
+    <tr>
+      <td style="padding: 36px 36px 28px; background: linear-gradient(135deg, #111111 0%, #1f2937 100%); text-align: left;">
+        <span style="display: inline-block; padding: 4px 12px; background-color: rgba(255, 255, 255, 0.12); border-radius: 9999px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #10b981;">
+          ● Tin nhắn liên hệ mới
+        </span>
+        <h1 style="margin: 14px 0 6px; font-size: 24px; font-weight: 700; color: #ffffff; letter-spacing: -0.02em;">
+          {{from_name}} vừa gửi lời nhắn
+        </h1>
+        <p style="margin: 0; font-size: 13px; color: #9ca3af;">
+          Từ biểu mẫu liên hệ trên portfolio của bạn
+        </p>
+      </td>
+    </tr>
+
+    <!-- Body Information Cards -->
+    <tr>
+      <td style="padding: 32px 36px;">
+        
+        <!-- Info Grid -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-bottom: 24px;">
+          <tr>
+            <td width="50%" style="padding-bottom: 16px; vertical-align: top;">
+              <span style="display: block; font-size: 11px; font-weight: 600; text-transform: uppercase; color: #6b7280; letter-spacing: 0.05em; margin-bottom: 4px;">
+                Người gửi
+              </span>
+              <span style="font-size: 15px; font-weight: 600; color: #111827;">
+                {{from_name}}
+              </span>
+            </td>
+            <td width="50%" style="padding-bottom: 16px; vertical-align: top;">
+              <span style="display: block; font-size: 11px; font-weight: 600; text-transform: uppercase; color: #6b7280; letter-spacing: 0.05em; margin-bottom: 4px;">
+                Email
+              </span>
+              <a href="mailto:{{from_email}}" style="font-size: 15px; font-weight: 500; color: #2563eb; text-decoration: none;">
+                {{from_email}}
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="padding-top: 4px;">
+              <span style="display: block; font-size: 11px; font-weight: 600; text-transform: uppercase; color: #6b7280; letter-spacing: 0.05em; margin-bottom: 6px;">
+                Mục đích liên hệ
+              </span>
+              <span style="display: inline-block; padding: 6px 14px; background-color: #f3f4f6; border-radius: 8px; font-size: 13px; font-weight: 600; color: #111827; border: 1px solid #e5e7eb;">
+                {{purpose}}
+              </span>
+            </td>
+          </tr>
+        </table>
+
+        <!-- Message Box -->
+        <div style="background-color: #f9fafb; border-radius: 14px; padding: 22px; border: 1px solid #f3f4f6; margin-bottom: 28px;">
+          <span style="display: block; font-size: 11px; font-weight: 600; text-transform: uppercase; color: #6b7280; letter-spacing: 0.05em; margin-bottom: 10px;">
+            Nội dung chi tiết
+          </span>
+          <p style="margin: 0; font-size: 14px; line-height: 1.65; color: #374151; white-space: pre-wrap;">{{message}}</p>
+        </div>
+
+        <!-- Action Button -->
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+          <tr>
+            <td align="center">
+              <a href="mailto:{{from_email}}?subject=Re: [Portfolio] Phản hồi liên hệ từ Nguyễn Thanh Sang" style="display: inline-block; padding: 14px 32px; background-color: #111111; color: #ffffff; text-decoration: none; border-radius: 9999px; font-size: 13px; font-weight: 600; letter-spacing: 0.01em;">
+                Trả lời email của {{from_name}} →
+              </a>
+            </td>
+          </tr>
+        </table>
+
+      </td>
+    </tr>
+
+    <!-- Footer -->
+    <tr>
+      <td style="padding: 20px 36px; background-color: #fafafa; border-top: 1px solid #f3f4f6; text-align: center;">
+        <p style="margin: 0; font-size: 12px; color: #9ca3af;">
+          © Nguyễn Thanh Sang • Portfolio Notification System
+        </p>
+      </td>
+    </tr>
+
+  </table>
+
+</body>
+</html>
