@@ -203,7 +203,7 @@
   left: 0;
   z-index: 40;
   flex-shrink: 0;
-  padding: 26px calc(clamp(16px, 1.2vw, 24px) + 8px);
+  padding: 18px calc(clamp(16px, 1.2vw, 24px) + 8px);
   background-color: transparent;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
@@ -232,20 +232,20 @@ html[data-theme="dark"] .home-header.header-scrolled {
 .home-nav > :first-child { flex: 0 0 auto; }
 .home-nav > :last-child { margin-left: auto; white-space: nowrap; }
 .home-main { display: flex; flex: 1; min-height: 0; }
-.home-hero { position: relative; width: 100%; display: flex; flex-direction: column; }
+.home-hero { position: relative; width: 100%; display: flex; flex-direction: column; flex: 1; min-height: 0; }
 .home-title-stage {
   position: relative;
   z-index: 1;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  height: 180px;
+  align-items: center;
+  height: 140px;
   flex-shrink: 0;
   pointer-events: none;
   user-select: none;
 }
-.home-title { font-size: clamp(30px, 8.2vw, 180px); }
-.home-grid-stage { position: relative; z-index: 10; margin-top: -50px; flex: 1; min-height: 0; }
+.home-title { font-size: clamp(30px, 6.5vw, 120px); }
+.home-grid-stage { position: relative; z-index: 10; margin-top: -30px; flex: 1; min-height: 0; }
 .home-grid { display: grid; grid-template-columns: 1fr; gap: var(--home-gap); height: 100%; }
 .home-card-height { height: 220px; }
 .home-side-stack { display: grid; grid-template-rows: repeat(2, minmax(0, 1fr)); gap: var(--home-gap); }
@@ -254,24 +254,67 @@ html[data-theme="dark"] .home-header.header-scrolled {
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
 }
-.home-side-stack > a { align-items: flex-end; padding: 28px; }
+.home-side-stack > a { align-items: flex-end; padding: 24px; }
 @media (min-width: 768px) {
-  .home-page { height: 100dvh; min-height: 640px; }
+  .home-page {
+    height: 100dvh;
+    min-height: 640px;
+    padding-bottom: clamp(14px, 2vh, 22px);
+    overflow: hidden;
+  }
   .home-nav { column-gap: clamp(32px, 4.2vw, 80px); }
   .home-nav > :last-child { position: relative; padding-right: clamp(48px, 8vw, 160px); }
   .home-nav .header-controls { position: absolute; right: -12px; }
-  .home-title-stage { height: calc(23.3dvh - 76px + 50px); min-height: 112px; }
-  .home-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); }
+  .home-main {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    margin-top: clamp(10px, 1.8vh, 22px);
+  }
+  .home-title-stage {
+    height: clamp(80px, 12vh, 115px);
+    min-height: 75px;
+    align-items: center;
+    justify-content: center;
+  }
+  .home-title {
+    font-size: clamp(44px, 5.6vw, 96px);
+  }
+  .home-grid-stage {
+    position: relative;
+    z-index: 10;
+    margin-top: clamp(-28px, -3vh, -18px);
+    flex: 1;
+    min-height: 0;
+  }
+  .home-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
   .home-grid > * { min-height: 0; min-width: 0; }
   .home-card-height { height: 100%; }
-  .home-hero .vexoo-hero-card { border-radius: 36px; }
-  .home-grid > div > a { padding: 32px 36px; }
-  .home-side-stack > a > span:first-child { font-size: 20px; }
+  .home-hero .vexoo-hero-card { border-radius: 32px; }
+  .home-portrait > div { border-radius: 32px; }
+  .home-portrait img {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    object-position: center 15%;
+  }
+  .home-grid > div > a {
+    padding: clamp(18px, 2.4vh, 28px) clamp(22px, 2vw, 32px);
+  }
+  .home-side-stack > a {
+    padding: clamp(14px, 1.8vh, 22px);
+  }
+  .home-side-stack > a > span:first-child { font-size: 18px; }
 }
 @media (max-width: 767px) {
-  .home-header { padding: 22px clamp(16px, 1.2vw, 24px); }
+  .home-header { padding: 16px clamp(16px, 1.2vw, 24px); }
   .home-nav { flex-wrap: wrap; gap: 10px 20px; font-size: 12px; }
-  .home-title-stage { height: 100px; }
+  .home-title-stage { height: 90px; }
   .home-grid-stage { margin-top: -8px; }
   .home-grid > :nth-child(4) .home-card-height { height: 320px; }
   .home-side-stack { height: 280px; }
