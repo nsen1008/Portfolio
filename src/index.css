@@ -65,8 +65,8 @@
 .vexoo-hero-card {
   position: relative;
   background-color: rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   border-radius: 32px;
   border: none;
   box-shadow: none;
@@ -234,6 +234,8 @@ html[data-theme="dark"] .home-header.header-scrolled {
 .home-main { display: flex; flex: 1; min-height: 0; }
 .home-hero { position: relative; width: 100%; display: flex; flex-direction: column; }
 .home-title-stage {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -243,14 +245,14 @@ html[data-theme="dark"] .home-header.header-scrolled {
   user-select: none;
 }
 .home-title { font-size: clamp(30px, 8.2vw, 180px); }
-.home-grid-stage { position: relative; margin-top: -50px; flex: 1; min-height: 0; }
+.home-grid-stage { position: relative; z-index: 10; margin-top: -50px; flex: 1; min-height: 0; }
 .home-grid { display: grid; grid-template-columns: 1fr; gap: var(--home-gap); height: 100%; }
 .home-card-height { height: 220px; }
 .home-side-stack { display: grid; grid-template-rows: repeat(2, minmax(0, 1fr)); gap: var(--home-gap); }
 .home-side-stack > * { min-height: 0; }
 .home-hero .vexoo-hero-card {
-  backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
 }
 .home-side-stack > a { align-items: flex-end; padding: 28px; }
 @media (min-width: 768px) {

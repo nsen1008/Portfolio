@@ -16,6 +16,8 @@ const contactColumns = [
   ],
 ];
 
+const CURRENT_YEAR = new Date().getFullYear();
+
 export const Footer: React.FC = () => {
   const { t, path } = useLanguage();
   return (
@@ -50,7 +52,7 @@ export const Footer: React.FC = () => {
         ))}
       </div>
       <div className="mt-8 pt-4 border-t border-black/[0.08] flex flex-col sm:flex-row items-center justify-center gap-3 text-xs sm:text-sm text-black/50 font-sans">
-        <p>Copyright © {new Date().getFullYear()} • {t(PORTFOLIO_INFO.nickname)}</p>
+        <p>Copyright © {CURRENT_YEAR} • {t(PORTFOLIO_INFO.nickname)}</p>
       </div>
     </footer>
   );

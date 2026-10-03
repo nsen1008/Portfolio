@@ -69,7 +69,7 @@ export const Navbar: React.FC = () => {
 
   return (
     <>
-    <div aria-hidden="true" style={{ height: headerHeight, flexShrink: 0 }} />
+    {!isHome && <div aria-hidden="true" style={{ height: headerHeight, flexShrink: 0 }} />}
     <header
       ref={headerRef}
       className={`home-header w-full z-40 ${!isHome ? "inner-header" : ""} ${isScrolled ? "header-scrolled" : ""}`}
