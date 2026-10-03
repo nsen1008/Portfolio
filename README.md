@@ -1,62 +1,122 @@
-# ⚡ Nguyễn Thành Sang — Creative Developer Portfolio
+# Portfolio — Nguyễn Thanh Sang
 
-> Nền tảng Portfolio cá nhân phong cách Dark Luxe & Bento Grid hiện đại, tích hợp **Scroll-Driven Animation**, tương tác 60 FPS và showcase 4 dự án thực tế lớn.
-
----
-
-## 🌟 Tính Năng Nổi Bật (Features)
-
-1. **Hiệu ứng Scroll-Driven Animations**:
-   - Thanh tiến trình cuộn trang phát sáng gradient ở mép trên cùng (`scroll-progress-bar`).
-   - Hiệu ứng xuất hiện mượt mà khi cuộn tới (`@supports (animation-timeline: view())` và `scroll-reveal`).
-   - Nút cuộn nhanh lên đầu trang thông minh kèm tỷ lệ % cuộn trang.
-2. **Thiết kế Chuẩn UI/UX Pro Max**:
-   - Hệ thống font chữ: **Space Grotesk** (tiêu đề cá tính) + **Plus Jakarta Sans** (nội dung thanh thoát) + **JetBrains Mono** (thông số & code).
-   - Bảng màu Obsidian Dark Luxe chuẩn tương phản WCAG 4.5:1.
-   - Thẻ dự án Bento Grid với badge công nghệ, metrics thực chiến và modal soi chi tiết mã nguồn.
-3. **Showcase 4 Dự án Thực tế Lớn**:
-   - **Landing Côn Đảo**: GSAP + Lenis Smooth Scroll + React 19 + Tailwind v4.
-   - **Côn Đảo Trip**: Next.js 16 (App Router) + Zustand + i18n đa ngôn ngữ.
-   - **Cao Nguyên Xanh**: Three.js WebGL 3D + Leaflet Map + TanStack Query + PDF Generator.
-   - **Odyssey Hà Giang Loop**: Tour mạo hiểm quốc tế + Tối ưu SEO Schema.org + Google Tag Manager.
-4. **Developer Interactive Terminal**:
-   - Terminal giả lập dòng lệnh trực tiếp: hỗ trợ lệnh `help`, `projects`, `skills`, `whoami`, `test`, `contact`, `clear`.
-5. **Form Liên Hệ & Sao chép Email 1-Chạm**:
-   - Tích hợp hiệu ứng pháo giấy (Canvas Confetti) sống động khi tương tác.
+Personal portfolio website designed and developed with a modern tactile aesthetic, fluid micro-interactions, and multi-language support. Built using React 19, TypeScript, Vite, and Tailwind CSS.
 
 ---
 
-## 🚀 Hướng Dẫn Khởi Chạy (Quickstart)
+## Overview
 
-### Cách 1: Chạy trực tiếp với Node.js / Vite
+A modern Front-End Developer portfolio showcasing production-ready web applications, interactive case studies, and engineering philosophy. The interface is inspired by high-end tactile design patterns, featuring custom smooth scrolling, tactile grain backgrounds, dynamic theme switching, and responsive bento layouts.
+
+## Key Features
+
+- **Design System & Aesthetics**: Minimalist, tactile aesthetic with paper grain textures, frosted glass cards, balanced typography (Space Grotesk, Plus Jakarta Sans, JetBrains Mono), and curated dark/light color schemes.
+- **Bilingual Internationalization (i18n)**: Seamless switching between Vietnamese and English, with URL-driven locale prefixes (`/vi`, `/en`) and automatic document metadata updates.
+- **Interactive Project Case Studies**: Detailed project pages highlighting technical challenges, measurable impact, role breakdown, and live preview links.
+- **Contact Form with EmailJS**: Direct email delivery via EmailJS integration with fallback support, purpose selectors, and interactive feedback.
+- **Interactive 404 Canvas**: Immersive full-screen 404 error experience featuring an animated duck character with mouse-accelerated turbo speed, ambient aurora backdrops, and theme responsiveness.
+- **Initial Page Loader**: Smooth entry loading animation with vibrant logo gradient transitions, optimized to only trigger on initial visit or refresh.
+- **Performance & SEO**: Client-side routing with React Router, scroll-driven progress tracking, responsive layouts for all device form factors, and fast production bundle output via Vite.
+
+## Tech Stack
+
+- **Core**: React 19, TypeScript
+- **Bundler & Tooling**: Vite, Oxlint
+- **Styling**: Tailwind CSS v4, Vanilla CSS custom animations
+- **Animation & Interaction**: Framer Motion, Lenis Scroll, Canvas Confetti
+- **Icons**: Lucide React
+- **Integration**: EmailJS
+
+## Project Structure
+
+```text
+portfolio/
+├── public/                  # Static assets (favicons, images, CV)
+│   ├── images/              # Logos, portraits, project screenshots
+│   └── favicon.png          # Brand favicon
+├── src/
+│   ├── assets/              # Component-level static resources
+│   ├── components/          # Reusable UI components
+│   │   ├── animations/      # Text & scroll animation primitives
+│   │   ├── Navbar.tsx       # Navigation bar with theme & language toggle
+│   │   ├── Footer.tsx       # Site footer
+│   │   ├── PageLoader.tsx   # Entry loading spinner
+│   │   └── ContactSection.tsx
+│   ├── data/                # Portfolio configuration & project data
+│   ├── i18n/                # Localization dictionary (vi / en) & hooks
+│   ├── pages/               # Top-level view routes
+│   │   ├── HomePage.tsx
+│   │   ├── AboutPage.tsx
+│   │   ├── PortfolioPage.tsx
+│   │   ├── ProjectDetailPage.tsx
+│   │   ├── ContactPage.tsx
+│   │   └── NotFoundPage.tsx # Fullscreen 404 canvas
+│   ├── App.tsx              # Router configuration & root providers
+│   ├── index.css            # Design tokens, theme variables & animations
+│   └── main.tsx             # Application entry point
+├── .env.example             # Template for required environment variables
+├── index.html               # HTML entry with font preconnects & theme script
+├── package.json             # Dependencies and scripts
+├── tsconfig.json            # TypeScript configuration
+└── vite.config.ts           # Vite configuration
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18.0 or higher
+- npm 9.0 or higher
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/nsen1008/Portfolio.git
+   cd Portfolio
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Configure environment variables:
+   Copy `.env.example` to `.env` and provide your EmailJS credentials (optional for contact form testing):
+   ```bash
+   cp .env.example .env
+   ```
+
+   Variables in `.env`:
+   ```env
+   VITE_EMAILJS_SERVICE_ID=your_service_id
+   VITE_EMAILJS_TEMPLATE_ID=your_template_id
+   VITE_EMAILJS_PUBLIC_KEY=your_public_key
+   ```
+
+### Development
+
+Run the local development server:
 ```bash
-# Di chuyển vào thư mục dự án
-cd React/portfolio
-
-# Khởi chạy máy chủ phát triển
 npm run dev
 ```
-Trang web sẽ sẵn sàng tại `http://localhost:5173/`.
 
-### Cách 2: Xem bản Build Production
+Open [http://localhost:5173](http://localhost:5173) in your browser to view the application.
+
+### Production Build
+
+Create an optimized production build:
 ```bash
 npm run build
+```
+
+Preview the production build locally:
+```bash
 npm run preview
 ```
-Truy cập tại `http://localhost:4173/`.
 
-### Cách 3: Chạy bằng Docker
-```bash
-docker compose up -d
-```
-Truy cập tại `http://localhost:3000/`.
+## Author
 
----
-
-## 🏛️ Đội Ngũ Phát Triển (Virtual IT Department)
-- **IT Lead**: Thiết kế giải pháp kiến trúc & phân rã module.
-- **Software Engineer**: Lập trình React 19, TypeScript, Tailwind v4 và tương tác UI.
-- **DevOps Engineer**: Cấu hình Docker, multi-stage Nginx và GitHub Actions CI/CD.
-- **QA Automation**: Kiểm thử tương thích responsive, 0 lỗi biên dịch, 60 FPS.
-- **Security Engineer**: Đảm bảo tiêu chuẩn CSP, không rò rỉ secret, chống XSS.
-- **SysAdmin / Helpdesk**: Chuẩn hóa runbook và cấu hình mạng nội bộ.
+**Nguyễn Thanh Sang (Sen)**
+- Portfolio: [https://github.com/nsen1008/Portfolio](https://github.com/nsen1008/Portfolio)
+- Role: Front-End Developer
